@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mustafa Fehmi Altınbaş · Full-stack Software Developer</title>
+    <meta
+      name="description"
+      content="Full-stack software developer and industrial engineer from Istanbul. Production planning software for steel rolling mills, Java, Spring Boot, Angular, Oracle, NestJS."
+    />
+    <meta name="theme-color" content="#07090d" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mustafa Fehmi Altınbaş · Full-stack Software Developer" />
+    <meta property="og:description" content="Follow a slab down a rolling mill: every station is a part of my career." />
+    <meta property="og:url" content="https://fehmialtinbas.github.io/" />
+    <meta property="og:image" content="https://fehmialtinbas.github.io/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <div id="loader" class="loader" role="status">
+      <div class="loader-slab"></div>
+      <p data-t="loading">Heating up the furnace…</p>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#start" aria-label="Mustafa Fehmi Altınbaş"><span class="brand-slab"></span>MFA</a>
+      <div class="top-actions">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+        </div>
+        <a class="icon-btn" href="https://github.com/fehmialtinbas" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <nav id="linemap" class="linemap" aria-label="Stations"></nav>
+
+    <div class="hud" aria-hidden="true">
+      <div class="hud-top"><span class="hud-code">ST-00</span><span class="hud-machine"></span></div>
+      <div class="hud-temp"><b>1220</b> °C <span class="hud-label"></span></div>
+      <div class="hud-bar"><i></i></div>
+    </div>
+
+    <main id="content"></main>
+
+    <p class="scroll-hint" aria-hidden="true"><span data-t="scroll">Scroll to start the line</span><i></i></p>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
